@@ -46,6 +46,10 @@
       <Project>{A1B2C3D4-E5F6-4890-ABCD-EF1234567806}</Project>
       <Name>Fletex.Interfaces</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Framework.Interfaces\Framework.Interfaces.csproj">
+      <Project>{A1B2C3D4-E5F6-4890-ABCD-EF1234567801}</Project>
+      <Name>Framework.Interfaces</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Framework.Services.Security\Framework.Services.Security.csproj">
       <Project>{A1B2C3D4-E5F6-4890-ABCD-EF1234567803}</Project>
       <Name>Framework.Services.Security</Name>
@@ -56,17 +60,49 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUserManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUserManagement.Designer.cs">
+      <DependentUpon>FormUserManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUserPermissions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUserPermissions.Designer.cs">
+      <DependentUpon>FormUserPermissions.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUserManagement.resx">
+      <DependentUpon>FormUserManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUserPermissions.resx">
+      <DependentUpon>FormUserPermissions.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

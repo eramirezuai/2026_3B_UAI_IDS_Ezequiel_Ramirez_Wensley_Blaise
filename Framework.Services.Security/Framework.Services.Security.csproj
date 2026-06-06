@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -36,13 +36,35 @@
     <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Framework.DAL\Framework.DAL.csproj">
+      <Project>{a1b2c3d4-e5f6-4890-abcd-ef1234567802}</Project>
+      <Name>Framework.DAL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Framework.Interfaces\Framework.Interfaces.csproj">
       <Project>{A1B2C3D4-E5F6-4890-ABCD-EF1234567801}</Project>
       <Name>Framework.Interfaces</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Credentials\Data\FamilyCrud.cs" />
+    <Compile Include="Credentials\Data\FamilyParameterMapper.cs" />
+    <Compile Include="Credentials\Data\PatentCrud.cs" />
+    <Compile Include="Credentials\Data\PatentParameterMapper.cs" />
+    <Compile Include="Credentials\Data\UserCrud.cs" />
+    <Compile Include="Credentials\Data\UserParameterMapper.cs" />
+    <Compile Include="Credentials\Family.cs" />
+    <Compile Include="Credentials\Patent.cs" />
+    <Compile Include="Credentials\SinglePatent.cs" />
+    <Compile Include="Credentials\User.cs" />
+    <Compile Include="Encryption\DES3DESEncrypter.cs" />
+    <Compile Include="Encryption\EncryptedString.cs" />
+    <Compile Include="Encryption\HashedString.cs" />
+    <Compile Include="Encryption\SHA256Hasher.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Session\Session.cs" />
+    <Compile Include="Session\SessionFactory.cs" />
+    <Compile Include="Session\SessionFactoryLoader.cs" />
+    <Compile Include="Session\SessionManager.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
