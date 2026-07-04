@@ -44,7 +44,11 @@
     <Compile Include="DAL\IParameterMapper.cs" />
     <Compile Include="DAL\IRetriever.cs" />
     <Compile Include="DAL\IUpdater.cs" />
+    <Compile Include="IIdentifiable.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Security\Credentials\IPatent.cs" />
+    <Compile Include="Security\Credentials\IUser.cs" />
+    <Compile Include="Security\Credentials\IUserRetrieverByCredentials.cs" />
     <Compile Include="Security\Encryption\IEncrypter.cs" />
     <Compile Include="Security\Encryption\IHasher.cs" />
   </ItemGroup>
